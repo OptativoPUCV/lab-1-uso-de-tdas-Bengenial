@@ -125,6 +125,6 @@ int parentesisBalanceados(char *cadena) {
       push(S, cadena[i]);
    }
 
-   return 1;
+   return 0;
 }
 
