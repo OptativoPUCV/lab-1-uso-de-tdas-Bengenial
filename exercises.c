@@ -132,7 +132,7 @@ int parentesisBalanceados(char *cadena) {
          suma2++;
       }
    }
-   if(suma == suma2) return 1;
-   else return 0;
+   if(suma == suma2) return 0;
+   else return 1;
 }
 
