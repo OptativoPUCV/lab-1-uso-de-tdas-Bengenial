@@ -173,3 +173,14 @@ exercises.c:122:11: error: unused variable 'S' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 001e5b1
+Thu, Mar 20, 2025  5:52:36 PM: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:122:11: error: unused variable 'S' [-Werror=unused-variable]
+    Stack* S = create_stack();
+           ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+d5d7eeb
