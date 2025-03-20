@@ -122,7 +122,7 @@ int parentesisBalanceados(char *cadena) {
    Stack* S = create_stack();
    int suma = 0;
    int suma2 = 0;
-   for (int i = 0; i < strlen(cadena); i++){
+   for (int i = 0; cadena[i] != '\0'; i++){
       char caracter = cadena[i];
       if(caracter == '('){
          //push(S, caracter);
@@ -132,7 +132,7 @@ int parentesisBalanceados(char *cadena) {
          suma2++;
       }
    }
-   if(suma == suma2) return 0;
-   else return 1;
+   if(suma == suma2) return 1;
+   else return 0;
 }
 
