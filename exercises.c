@@ -128,7 +128,7 @@ int parentesisBalanceados(char *cadena) {
          //push(S, caracter);
          suma++;
       }
-      else{
+      if(caracter == ')'){
          suma2++;
       }
    }
