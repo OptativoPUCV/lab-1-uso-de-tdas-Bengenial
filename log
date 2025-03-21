@@ -680,3 +680,13 @@ Thu, Mar 20, 2025 10:23:10 PM:
  tests:  4|1
 total_score: 50/70
 5052bf4
+Thu, Mar 20, 2025 10:25:24 PM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:153:1: error: expected ';' before '}' token
+ }
+ ^
+Compilation failed
+8d1b39c
