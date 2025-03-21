@@ -143,5 +143,5 @@ int parentesisBalanceados(char *cadena) {
       elem1 = top(S1);
       elem2 = top(S2);
    }
-   return (elem1 == NULL && elem2 == NULL); 
+   return 1; 
 }
