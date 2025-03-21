@@ -122,34 +122,26 @@ int parentesisBalanceados(char *cadena) {
    Stack* S1 = create_stack();
    Stack* S2 = create_stack();
 
-   int len = strlen(cadena);
-   if (len % 2 != 0) return 0;
+   if (strlen(cadena) % 2 != 0) return 0;
 
-   for (int i = 0; i < len; i++){
-      char c = cadena[i];
-      if (c == '(' || c == '{' || c == '['){
-         push(S1,&c);
-      }
-      else if (c == ')' || c == '}' || c == ']'){
-         if (top(S1) == NULL) return 0;
-         push(S2,&c);
-      }
+   for (int i = 0, j = strlen(cadena) - 1; i <= j; i++ ,j--){
+      push(S1,cadena[i]);
+      push(S2,cadena[j]);
+
    }
 
-   
-   while(top(S1) != NULL && top(S2) != NULL){
-      char* ini = (char*)top(S1);
-      char* fin = (char*)top(S2);
-      if ((ini == '(' && fin == ')') ||
-         (ini == '{' && fin == '}')||
-         (ini == '[' && fin == ']')){
-            pop(S1);
-            pop(S2);
-
-         }
-      else return 0;
+   void* elem1 = top(S1);
+   void* elem2 = top(S2);
+   while(elem1 != NULL){
+      if ((*(char*)elem1 == '(' && *(char*)elem2 != ')') ||
+         (*(char*)elem1 == '{' && *(char*)elem2 != '}') ||
+         (*(char*)elem1 == '[' && *(char*)elem2 != ']'))
+            return 0;
+            
+      pop(S1);
+      pop(S2);
+      elem1 = top(S1);
+      elem2 = top(S2);
    }
-
-   
-   return (top(S1) == NULL && top(S2) == NULL);
+   return 1;
 }
