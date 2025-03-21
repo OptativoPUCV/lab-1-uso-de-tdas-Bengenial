@@ -576,3 +576,32 @@ exercises.c:137:35: error: suggest parentheses around '&&' within '||' [-Werror=
 cc1.exe: all warnings being treated as errors
 Compilation failed
 1221e00
+Thu, Mar 20, 2025 10:05:19 PM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:128:15: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+       push(S1,cadena[i]);
+               ^~~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'char'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:129:15: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+       push(S2,cadena[j]);
+               ^~~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'char'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:137:35: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+          if (*(char*)elem1 == '{' && *(char*)elem2 != '}' || *(char*)elem1 == '[' && *(char*)elem2 != ']'){
+              ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+141b23f
