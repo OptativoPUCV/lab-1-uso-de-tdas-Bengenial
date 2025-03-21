@@ -690,3 +690,13 @@ exercises.c:153:1: error: expected ';' before '}' token
  ^
 Compilation failed
 8d1b39c
+Thu, Mar 20, 2025 10:26:47 PM: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:154:1: error: expected ';' before '}' token
+ }
+ ^
+Compilation failed
+241e32c
