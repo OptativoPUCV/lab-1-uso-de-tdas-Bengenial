@@ -125,8 +125,8 @@ int parentesisBalanceados(char *cadena) {
    if (strlen(cadena) % 2 != 0) return 0;
 
    for (int i = 0, j = strlen(cadena) - 1; i < j; i++ ,j--){
-      push(S1,cadena[i]);
-      push(S2,cadena[j]);
+      push(S1,&cadena[i]);
+      push(S2,&cadena[j]);
 
    }
 
@@ -134,8 +134,8 @@ int parentesisBalanceados(char *cadena) {
    void* elem2 = top(S2);
    while(elem1 != NULL){
       if ((*(char*)elem1 == '(' && *(char*)elem2 != ')') ||
-         (*(char*)elem1 == '{' && *(char*)elem2 != '}') ||
-         (*(char*)elem1 == '[' && *(char*)elem2 != ']'))
+          (*(char*)elem1 == '{' && *(char*)elem2 != '}') ||
+          (*(char*)elem1 == '[' && *(char*)elem2 != ']'))
             return 0;
 
       pop(S1);
@@ -143,5 +143,5 @@ int parentesisBalanceados(char *cadena) {
       elem1 = top(S1);
       elem2 = top(S2);
    }
-   return 1;
+   return (elem1 == NULL && elem2 == NULL); 
 }
