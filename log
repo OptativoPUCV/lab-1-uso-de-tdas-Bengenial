@@ -710,3 +710,32 @@ exercises.c:156:1: error: expected ';' before '}' token
  ^
 Compilation failed
 f780434
+Thu, Mar 20, 2025 10:31:21 PM: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:143:25: error: comparison between pointer and integer [-Werror]
+       if (((char*)elem1 == '(' && (char*)elem2 == ')') ||
+                         ^~
+exercises.c:143:48: error: comparison between pointer and integer [-Werror]
+       if (((char*)elem1 == '(' && (char*)elem2 == ')') ||
+                                                ^~
+exercises.c:144:24: error: comparison between pointer and integer [-Werror]
+          ((char*)elem1 == '{' && (char*)elem2 == '}')||
+                        ^~
+exercises.c:144:47: error: comparison between pointer and integer [-Werror]
+          ((char*)elem1 == '{' && (char*)elem2 == '}')||
+                                               ^~
+exercises.c:145:24: error: comparison between pointer and integer [-Werror]
+          ((char*)elem1 == '[' && (char*)elem2 == ']')){
+                        ^~
+exercises.c:145:47: error: comparison between pointer and integer [-Werror]
+          ((char*)elem1 == '[' && (char*)elem2 == ']')){
+                                               ^~
+exercises.c:156:1: error: expected ';' before '}' token
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+d3a7d62
